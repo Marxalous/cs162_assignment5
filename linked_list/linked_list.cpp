@@ -4,6 +4,8 @@ int Linked_List::get_length() {
 	this->length = 0;
 	Node* current = this->head;
 
+	if (current == nullptr) return 0;
+
 	while (current != nullptr) {
 		++this->length;
 		current = current->next;
@@ -28,6 +30,8 @@ void Linked_List::clear() {
 	// delete the entire list (remove all nodes and reset length to 0)
 	// Your code goes here:
 	Node* current = this->head;
+
+	if (this->head == nullptr) return;
 
 	while (current != nullptr) {
 		Node* next_node = current->next;
